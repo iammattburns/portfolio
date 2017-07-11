@@ -1,0 +1,14 @@
+/* TEAM */
+Title: Matt Burns
+Position: Developer
+Site: https://iammattburns.co.uk
+Contact: hello [at] iammattburns.co.uk
+Twitter: @iammattburns
+Location: Birmingham, West Midlands, UK
+
+/* SITE */
+Last update:2015/10/16
+Language:English
+Standards: HTML5,CSS3,JavaScript
+Components: jQuery, animate, font-awesome, TweenMax, ScrollToPlugin, Waypoints
+Software: Sublime Text, Adobe Photoshop, PHP, Grunt, FileZilla

@@ -1,0 +1,106 @@
+#about{
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 100%, #000), url(../images/about-bg.png) center no-repeat,#fff;
+  background: linear-gradient(rgba(0,0,0,0) 100%, #000),url(../images/about-bg.png) center no-repeat,#fff;
+  background-size: auto, cover;
+	padding: 100px 0;
+	@include respond-to(handhelds) {padding: 35px 0;}
+	@include respond-to(tablets) {padding: 45px 0;}
+}
+
+#about a {
+  color: #122937;
+  }
+
+.skill {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.skill .percent {
+	width:100px;
+	height:100px;
+	padding: 10px 0 0 10px;
+	color: #122937;
+	@include respond-to(handhelds) {
+    	width:80%;
+		margin: 0 10%;
+  	}
+}
+
+.skill .description {
+	width:90px;
+	height:90px;
+	padding:10px;
+	font-size: 13px;
+	color: #727272;
+	@include respond-to(handhelds) {
+    	width:80%;
+    	padding:5%;
+    	margin: 0 5%;
+  	}
+}
+
+.skill h3 {
+	font-size:18px;
+	margin-bottom: 5px;
+	color: #000;
+}
+
+.col-2.skill {
+	@include respond-to(handhelds) {
+    	width:46%;
+    	float: left;
+    	display: inline-block;
+    	margin: 10px 2%;
+    	padding: 0;
+  	}
+  	@include respond-to(tablets) {
+    	width:16%;
+    	float: left;
+    	display: inline-block;
+    	margin: 10px 2%;
+    	padding: 0;
+  	}
+  }
+
+.circliful {
+    position: relative; 
+}
+
+.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+
+
+#about-sub {
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 100%, #000), url(../images/developer-bg.png) center no-repeat,#122937;
+    background: linear-gradient(rgba(0,0,0,0) 100%, #000),url(../images/developer-bg.png) center no-repeat,#122937;
+    background-size: auto, cover;
+	padding: 6em 0;
+	color: #fff;
+	text-align: left;
+	@include respond-to(handhelds) {
+    	padding: 1em 10px;
+  	}
+  	@include respond-to(tablets) {
+    	padding: 1em 10px;
+  	}
+}
+
+#about-sub h3 {
+	font-family: $base-font-family;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 2em;
+}
+
+.stack {
+  margin-top: 40px;
+}
+
+.stack img {
+  margin-right: 20px;
+}

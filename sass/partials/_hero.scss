@@ -1,0 +1,45 @@
+.hero-container
+{
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 100%, #000), url(../images/hero.png) no-repeat,#122937;
+    background: linear-gradient(rgba(0,0,0,0) 100%, #000),url(../images/hero.png) no-repeat,#122937;
+    background-size: auto, cover;
+	color: #fff;
+	z-index: 1;
+	height: 100vh;
+	position: relative;
+	@include respond-to(tablets) {
+    	height: 800px;
+  	}
+	/* background: url(../images/hero.jpg) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	color: #fff; */
+}
+
+.hero-container p
+{
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 17px;
+	@include respond-to(handhelds) {
+    	font-size: 12px;
+    	padding: 20px 10px;
+  	}
+  	@include respond-to(tablets) {
+    	font-size: 14px;
+    	padding: 20px 10px;
+  	}
+}
+
+.contact-me {
+	font-size: 20px;
+	font-weight: 900;
+	border: 1px #fff solid;
+	margin-top: 30px;
+	padding: 20px;
+	display:inline-block;
+}

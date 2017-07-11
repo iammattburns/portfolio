@@ -1,0 +1,52 @@
+#footer {
+	background: #333333;
+	color: #666666;
+	padding: 50px 0;
+	text-align: left;
+	font-size:13px;
+	@include respond-to(handhelds) {
+    	text-align: center;
+    	font-size: 15px;
+      [class*='col-'] {
+        padding-bottom: 20px;
+      }
+  }
+  @include respond-to(tablets) {
+    	text-align: center;
+    	font-size: 15px;
+      [class*='col-'] {
+        padding-bottom: 20px;
+      }
+  }
+}
+
+#footer h3 {
+	color: #999999;
+	font-size:21px;
+	padding-top: 10px;
+	@include respond-to(handhelds) {
+    	font-size: 23px;
+  	}
+  	@include respond-to(tablets) {
+    	font-size: 23px;
+  	}
+}
+
+#footer h4 {
+	color: #999999;
+	font-size:13px;
+	@include respond-to(handhelds) {
+    	font-size: 15px;
+  	}
+  	@include respond-to(tablets) {
+    	font-size: 15px;
+  	}
+}
+
+#footer a {
+	color: #666666;
+}
+
+#footer .social-links a {
+	padding-right:10px;
+}

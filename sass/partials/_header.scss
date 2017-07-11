@@ -1,0 +1,37 @@
+#header {
+	padding: 50px 0;
+	text-align:left;
+	@include respond-to(handhelds) {
+    	padding: 10px  0 40px;
+  	}
+  	@include respond-to(tablets) {
+    	padding: 20px;
+  	}
+}
+
+#header .col-9 {
+ @include respond-to(handhelds) {
+      padding:0;
+      margin-left:0;
+      margin-right:0;
+    }
+  @include respond-to(tablets) {
+      padding:0;
+      margin:0;
+    }
+  }
+
+.logo {
+	width:82px;
+	@include respond-to(handhelds) {
+    	width:52px;
+      margin: 10px 0 0 10px;
+  	}
+}
+
+.single-page-header {
+  background: #122937;
+  .icon-bars {
+    color: #fff;
+  }
+}

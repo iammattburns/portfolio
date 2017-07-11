@@ -1,0 +1,31 @@
+﻿// Base
+@import 'core/_variables.scss';
+@import 'core/_base.scss';
+@import 'core/_mixins.scss';
+@import 'core/_normalize.scss';
+@import 'core/_fonts.scss';
+@import 'core/_font-icons.scss';
+@import 'core/_typography.scss';
+@import 'core/_grid.scss';
+
+// Modules 
+@import 'modules/_buttons.scss';
+@import 'modules/_forms.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_tables.scss';
+
+// Partials
+@import 'partials/_header.scss';
+@import 'partials/_navigation.scss';
+@import 'partials/_hero.scss';
+@import 'partials/_footer.scss';
+
+// Vendor
+@import 'vendor/_animate.scss';
+
+// Pages
+@import 'pages/_home.scss';
+@import 'pages/_services.scss';
+@import 'pages/_about.scss';
+@import 'pages/_contact.scss';
+

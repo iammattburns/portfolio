@@ -1,0 +1,304 @@
+﻿// breakpoints
+$bp-sm : 24em;
+$bp-md : 768px;
+$bp-lg : 980px;
+$bp-xl : 73em;
+
+@mixin bp($point) {
+  @if $point == sm {
+    @media only screen and (min-width: $bp-sm ) { @content; }
+  }
+  @else if $point == sm-only {
+	  @media only screen and (min-width: 0 ) and (max-width: $bp-md + 1) { @content; }
+  }
+  @else if $point == md {
+    @media only screen and (min-width: $bp-md) { @content; }
+  }
+  @else if $point == md-only {
+	  @media only screen and (min-width: $bp-sm + 2 ) and (max-width: $bp-lg) { @content; }
+  }
+  @else if $point == lg {
+    @media only screen and (min-width: $bp-lg) { @content; }
+  }
+  @else if $point == xl {
+  	@media only screen and (min-width: $bp-xl) { @content; }
+  }
+  @else if $point == handheld {
+	  @media only screen and (max-width: $bp-lg) { @content; }
+  }
+}
+
+
+$grid-columns: 12;
+$sm-container-width: 100%;
+$md-container-width: 100%;
+$lg-container-width: 960px;
+$xl-container-width: 1170px;
+$gutter: 10px;
+$gutter-lg: 10px;
+
+/* Mobile first queries */
+.container {
+	width: 100%;
+    margin-left: auto;
+ 	margin-right: auto;
+	//position:relative;
+	@include clearfix;
+}
+
+.row{
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@include clearfix;
+}
+
+.row .row {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+[class*='col-'] {
+	float: left;
+	width:100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+@for $i from 1 through $grid-columns {
+		.col-xs-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter;
+			padding-right: $gutter;
+		}
+	}
+
+.row-collapse [class*='col-'] {
+	padding-left:0;
+	padding-right: 0;
+}
+
+@media (min-width: $bp-sm) {
+	.container {
+      width: $sm-container-width;
+    }
+
+	[class*='col-'] {
+	  float: left;
+	}
+
+	.row{
+		@include clearfix;
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 	  	.col-#{$i} {
+    		width: 100%;
+    	}
+ 	}
+
+	@for $i from 1 through $grid-columns {
+		.col-sm-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter;
+			padding-right: $gutter;
+		}
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 		.col-fixed-#{$i} {
+        	//width: $sm-container-width / $grid-columns * $i - 6px; // TODO - Why is this 6px? Work it out.
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.push-#{$i} {
+			left: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.pull-#{$i} {
+			right: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+
+	.row-sm-collapse [class*='col-'] {
+		padding-left:0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: $bp-md) {
+	.container {
+      width: $md-container-width;
+    }
+
+	[class*='col-'] {
+	  float: left;
+	}
+
+
+
+	.row{
+	  // padding:0;
+    @include clearfix;
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 	  	.col-#{$i} {
+			width: 100% / $grid-columns * $i;
+			// padding-left: $gutter;
+			// padding-right: $gutter;
+    	}
+ 	}
+
+	@for $i from 1 through $grid-columns {
+		.col-md-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter;
+			padding-right: $gutter;
+		}
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 		.col-fixed-#{$i} {
+        	//width: $md-container-width / $grid-columns * $i - 6px; // TODO - Why is this 6px? Work it out.
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.push-#{$i} {
+			left: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.pull-#{$i} {
+			right: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+
+	.row-md-collapse [class*='col-'] {
+		padding-left:0;
+		padding-right: 0;
+	}
+
+}
+
+/* Larger than tablet */
+@media (min-width: $bp-lg) {
+
+	.container {
+      width: $lg-container-width;
+      padding-left: 0;
+	  padding-right: 0;
+    }
+
+	[class*='col-'] {
+	  float: left;
+	}
+
+	.row{
+	  padding:0;
+      @include clearfix;
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 	  	.col-#{$i} {
+    		width: 100% / $grid-columns * $i;
+			padding-left: $gutter-lg;
+			padding-right: $gutter-lg;
+    	}
+ 	}
+
+	@for $i from 1 through $grid-columns {
+		.col-lg-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter-lg;
+			padding-right: $gutter-lg;
+		}
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 		.col-fixed-#{$i} {
+        	width: $lg-container-width / $grid-columns * $i - 6px; // TODO - Why is this 6px? Work it out.
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.push-#{$i} {
+			left: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.pull-#{$i} {
+			right: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+
+	.row-lg-collapse [class*='col-'] {
+		padding-left:0;
+		padding-right: 0;
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: $bp-xl) {
+    .container {
+      width: $xl-container-width;
+      padding-left: 0;
+	  padding-right: 0;
+    }
+
+	[class*='col-'] {
+	  float: left;
+	}
+
+	.row{
+	  padding:0;
+      @include clearfix;
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 	  	.col-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter-lg;
+			padding-right: $gutter-lg;
+    	}
+ 	}
+
+	@for $i from 1 through $grid-columns {
+		.col-xl-#{$i} {
+			width: 100% / $grid-columns * $i;
+			padding-left: $gutter-lg;
+			padding-right: $gutter-lg;
+		}
+	}
+
+ 	@for $i from 1 through $grid-columns {
+ 		.col-fixed-#{$i} {
+        	width: $xl-container-width / $grid-columns * $i - 6px; // TODO - Why is this 6px? Work it out.
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.push-#{$i} {
+			left: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+  @for $i from 1 through $grid-columns {
+ 	  	.pull-#{$i} {
+			right: 100% / $grid-columns * $i;
+    	}
+ 	}
+
+	.row-xl-collapse [class*='col-'] {
+		padding-left:0;
+		padding-right: 0;
+	}
+}

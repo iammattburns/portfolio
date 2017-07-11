@@ -1,0 +1,73 @@
+#contact {
+	padding: 100px 0;
+	@include respond-to(handhelds) {padding: 35px 10px;}
+  	@include respond-to(tablets) {padding: 45px 0;}
+}
+
+#contact h2 {
+	margin-bottom: 50px;
+}
+
+#contact a {
+	color: #333;
+}
+.field label {
+	text-align: left;
+	font-size: 13px;
+	color: #727272;
+}
+
+.submit-field {
+	text-align: right;
+}
+
+.form {
+	margin-top: 30px;
+	width: 60%;
+	max-width: 600px;
+	margin: 20px auto;
+	@include respond-to(handhelds) {
+    	width: auto;
+  	}
+  	@include respond-to(tablets) {
+    	
+    	width: 60%;
+    	
+  	}
+}
+
+.phone {
+	font-size:18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	padding-right: 30px;
+	text-align: right;
+	@include respond-to(handhelds) {
+    	text-align: center;
+  	}
+  	@include respond-to(tablets) {
+    	text-align: right;
+  	}
+}
+
+.email {
+	font-size: 18px;
+	text-align: left;
+	@include respond-to(handhelds) {
+    	text-align: center;
+  	}
+  	@include respond-to(tablets) {
+    	text-align: left;
+  	}
+}
+
+.message.success {
+	display:none;
+	background: #5DA423;
+	padding:10px 0 3px 20px;
+	border-radius: 5px;
+	color: #fff;
+	margin-bottom: 20px;
+	font-size: 13px;
+	text-align: left;
+}

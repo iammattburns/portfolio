@@ -1,0 +1,141 @@
+.headline {
+	text-align: left;
+	@include respond-to(handhelds) {
+	    	text-align: center;
+	  	}
+  @include respond-to(tablets) {
+    	text-align: center;
+  	}
+}
+
+.section-intro {
+	padding-left: 25%;
+	padding-right: 25%;
+	text-align: center;
+	color: #333333;
+	@include respond-to(handhelds) {
+	    	font-size:14px;
+	    	line-height: 24px;
+	    	padding: 0 10% 30px 10%;
+	  	}
+	@include respond-to(tablets) {
+			padding: 0 10% 30px 10%;
+	  	}
+}
+
+#intro {
+	font-family: 'Merriweather', serif;
+	font-size:20px;
+	line-height: 38px;
+	padding-top:70px;
+	padding-bottom:70px;
+	background: url(../images/dot-bg.jpg) repeat;
+	@include respond-to(handhelds) {
+	    	padding-top:50px;
+			padding-bottom:20px;
+	  	}
+	 @include respond-to(tablets) {
+	    	padding-top:50px;
+			padding-bottom:20px;
+	  	}
+}
+
+#intro .section-intro {
+	padding-left: 30%;
+	padding-right: 30%;
+	@include respond-to(handhelds) {
+    	padding-left: 15%;
+		padding-right: 15%;
+  	}
+  	@include respond-to(tablets) {
+    	padding-left: 15%;
+		padding-right: 15%;
+  	}
+	}
+
+#intro .col-6 {
+	padding: 0 50px;
+	@include respond-to(handhelds) {
+    	padding: 0 20px;
+  	}
+}
+
+#intro p {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#intro em {
+	font-weight: 900;
+}
+
+#intro hr {
+	width: 50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#cta {
+	background: $secondary-background-color;
+	padding: 50px 0;
+	text-align: center;
+	color: #fff;
+	@include respond-to(handhelds) {
+    	padding: 20px 20px;
+  	}
+  	a:last-of-type {
+  		@include respond-to(tablets) {
+    		display:block;
+  		}
+  	}
+}
+
+#cta p {
+	margin:0 auto;
+	font-size:36px;
+	@include respond-to(handhelds) {
+    	font-size:20px;
+  	}
+}
+
+	#cta p.cta-title {
+		font-size: 20px;
+		margin-bottom: 20px;
+		@include respond-to(handhelds) {
+	    	font-size:12px;
+	    	margin-bottom: 3px;
+	  	}
+	}
+
+
+#tweets {
+	background: #122937;
+	color: #fff;
+	padding: 30px 0;
+}
+
+#tweets h3 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+#tweets p {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	font-weight: 100;
+	font-style: italic;
+}
+
+
+#topcontrol {
+	font-size: 18px;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	padding: 0 0 0 9px; 
+	background:#7f7f7f;
+  	background:rgba(229, 229, 229, 0.9);
+  	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}

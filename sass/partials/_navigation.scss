@@ -1,0 +1,104 @@
+nav {
+    display: inline-block;
+    float:right;
+    @include respond-to(handhelds) {
+      display:none;
+      margin: -10px 0 0 0;
+      width:100%;
+      border-top: 1px solid #727272;
+      border-bottom: 1px solid #727272;
+      background-color:rgba(192,192,192,0.2);
+    }
+    @include respond-to(tablets) {
+      display:none;
+      margin: -10px 0 0 0;
+      width:100%;
+      border-top: 1px solid #727272;
+      border-bottom: 1px solid #727272;
+      background-color:rgba(192,192,192,0.2);
+    }
+}
+
+nav ul {
+    display: inline-block;
+    margin: 15px 0 0 0;
+    vertical-align: top;
+    @include respond-to(handhelds) {
+      display:block;
+      text-align: right;
+      margin-top: 5px;
+    }
+    @include respond-to(tablets) {
+      display:block;
+      text-align: right;
+      margin-top: 5px;
+    }
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    border-bottom: 2px transparent solid;
+    height: 35px;
+    -o-transition: border-bottom .3s ease-in-out;
+    -ms-transition: border-bottom .3s ease-in-out;
+    -moz-transition: border-bottom .3s ease-in-out;
+    -webkit-transition: border-bottom .3s ease-in-out;
+    transition: border-bottom .3s ease-in-out;
+    @include respond-to(handhelds) {
+      display:block;
+    }
+    @include respond-to(tablets) {
+      display:block;
+    }
+}
+
+nav li:hover {
+    border-bottom: 2px #fff solid
+}
+
+nav a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    color: #fff;
+
+}
+
+nav .social-links {
+    display: inline-block;
+    height: 30px;
+    margin: 15px 0 0 10px;
+    @include respond-to(handhelds) {
+      float:right;
+      margin: 0 8px 0 10px;
+    }
+    @include respond-to(tablets) {
+      float:right;
+      margin: 0 8px 0 10px;
+    }
+}
+
+nav .social-link {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 5px 0 0;
+    padding: 0
+}
+
+.menu-button {
+    display:none;
+    float: right;
+    margin: 10px 15px;
+    font-size: 28px;
+    @include respond-to(handhelds) {
+      display:inline-block;
+    }
+    @include respond-to(tablets) {
+      display:inline-block;
+    }
+}
